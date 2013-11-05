@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8AB79C65182978E700B94538 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB79C64182978E700B94538 /* Foundation.framework */; };
+		8AB79C67182978E700B94538 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB79C66182978E700B94538 /* CoreGraphics.framework */; };
+		8AB79C69182978E700B94538 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB79C68182978E700B94538 /* UIKit.framework */; };
+		8AB79C6F182978E700B94538 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AB79C6D182978E700B94538 /* InfoPlist.strings */; };
+		8AB79C71182978E700B94538 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB79C70182978E700B94538 /* main.m */; };
+		8AB79C75182978E700B94538 /* ZMBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB79C74182978E700B94538 /* ZMBAppDelegate.m */; };
+		8AB79C78182978E700B94538 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB79C76182978E700B94538 /* Main.storyboard */; };
+		8AB79C7B182978E700B94538 /* ZMBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB79C7A182978E700B94538 /* ZMBViewController.m */; };
+		8AB79C7D182978E700B94538 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AB79C7C182978E700B94538 /* Images.xcassets */; };
+		8AB79C84182978E700B94538 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB79C83182978E700B94538 /* XCTest.framework */; };
+		8AB79C85182978E700B94538 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB79C64182978E700B94538 /* Foundation.framework */; };
+		8AB79C86182978E700B94538 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB79C68182978E700B94538 /* UIKit.framework */; };
+		8AB79C8E182978E700B94538 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AB79C8C182978E700B94538 /* InfoPlist.strings */; };
+		8AB79C90182978E700B94538 /* ZMBCameraMadnessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB79C8F182978E700B94538 /* ZMBCameraMadnessTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8AB79C87182978E700B94538 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AB79C59182978E700B94538 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AB79C60182978E700B94538;
+			remoteInfo = ZMBCameraMadness;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8AB79C61182978E700B94538 /* ZMBCameraMadness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZMBCameraMadness.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AB79C64182978E700B94538 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8AB79C66182978E700B94538 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8AB79C68182978E700B94538 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8AB79C6C182978E700B94538 /* ZMBCameraMadness-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZMBCameraMadness-Info.plist"; sourceTree = "<group>"; };
+		8AB79C6E182978E700B94538 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8AB79C70182978E700B94538 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8AB79C72182978E700B94538 /* ZMBCameraMadness-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZMBCameraMadness-Prefix.pch"; sourceTree = "<group>"; };
+		8AB79C73182978E700B94538 /* ZMBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMBAppDelegate.h; sourceTree = "<group>"; };
+		8AB79C74182978E700B94538 /* ZMBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMBAppDelegate.m; sourceTree = "<group>"; };
+		8AB79C77182978E700B94538 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8AB79C79182978E700B94538 /* ZMBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMBViewController.h; sourceTree = "<group>"; };
+		8AB79C7A182978E700B94538 /* ZMBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMBViewController.m; sourceTree = "<group>"; };
+		8AB79C7C182978E700B94538 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8AB79C82182978E700B94538 /* ZMBCameraMadnessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZMBCameraMadnessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AB79C83182978E700B94538 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8AB79C8B182978E700B94538 /* ZMBCameraMadnessTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZMBCameraMadnessTests-Info.plist"; sourceTree = "<group>"; };
+		8AB79C8D182978E700B94538 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8AB79C8F182978E700B94538 /* ZMBCameraMadnessTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMBCameraMadnessTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8AB79C5E182978E700B94538 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AB79C67182978E700B94538 /* CoreGraphics.framework in Frameworks */,
+				8AB79C69182978E700B94538 /* UIKit.framework in Frameworks */,
+				8AB79C65182978E700B94538 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AB79C7F182978E700B94538 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AB79C84182978E700B94538 /* XCTest.framework in Frameworks */,
+				8AB79C86182978E700B94538 /* UIKit.framework in Frameworks */,
+				8AB79C85182978E700B94538 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8AB79C58182978E700B94538 = {
+			isa = PBXGroup;
+			children = (
+				8AB79C6A182978E700B94538 /* ZMBCameraMadness */,
+				8AB79C89182978E700B94538 /* ZMBCameraMadnessTests */,
+				8AB79C63182978E700B94538 /* Frameworks */,
+				8AB79C62182978E700B94538 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8AB79C62182978E700B94538 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8AB79C61182978E700B94538 /* ZMBCameraMadness.app */,
+				8AB79C82182978E700B94538 /* ZMBCameraMadnessTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8AB79C63182978E700B94538 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8AB79C64182978E700B94538 /* Foundation.framework */,
+				8AB79C66182978E700B94538 /* CoreGraphics.framework */,
+				8AB79C68182978E700B94538 /* UIKit.framework */,
+				8AB79C83182978E700B94538 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8AB79C6A182978E700B94538 /* ZMBCameraMadness */ = {
+			isa = PBXGroup;
+			children = (
+				8AB79C73182978E700B94538 /* ZMBAppDelegate.h */,
+				8AB79C74182978E700B94538 /* ZMBAppDelegate.m */,
+				8AB79C76182978E700B94538 /* Main.storyboard */,
+				8AB79C79182978E700B94538 /* ZMBViewController.h */,
+				8AB79C7A182978E700B94538 /* ZMBViewController.m */,
+				8AB79C7C182978E700B94538 /* Images.xcassets */,
+				8AB79C6B182978E700B94538 /* Supporting Files */,
+			);
+			path = ZMBCameraMadness;
+			sourceTree = "<group>";
+		};
+		8AB79C6B182978E700B94538 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AB79C6C182978E700B94538 /* ZMBCameraMadness-Info.plist */,
+				8AB79C6D182978E700B94538 /* InfoPlist.strings */,
+				8AB79C70182978E700B94538 /* main.m */,
+				8AB79C72182978E700B94538 /* ZMBCameraMadness-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8AB79C89182978E700B94538 /* ZMBCameraMadnessTests */ = {
+			isa = PBXGroup;
+			children = (
+				8AB79C8F182978E700B94538 /* ZMBCameraMadnessTests.m */,
+				8AB79C8A182978E700B94538 /* Supporting Files */,
+			);
+			path = ZMBCameraMadnessTests;
+			sourceTree = "<group>";
+		};
+		8AB79C8A182978E700B94538 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AB79C8B182978E700B94538 /* ZMBCameraMadnessTests-Info.plist */,
+				8AB79C8C182978E700B94538 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8AB79C60182978E700B94538 /* ZMBCameraMadness */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AB79C93182978E700B94538 /* Build configuration list for PBXNativeTarget "ZMBCameraMadness" */;
+			buildPhases = (
+				8AB79C5D182978E700B94538 /* Sources */,
+				8AB79C5E182978E700B94538 /* Frameworks */,
+				8AB79C5F182978E700B94538 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZMBCameraMadness;
+			productName = ZMBCameraMadness;
+			productReference = 8AB79C61182978E700B94538 /* ZMBCameraMadness.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8AB79C81182978E700B94538 /* ZMBCameraMadnessTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AB79C96182978E700B94538 /* Build configuration list for PBXNativeTarget "ZMBCameraMadnessTests" */;
+			buildPhases = (
+				8AB79C7E182978E700B94538 /* Sources */,
+				8AB79C7F182978E700B94538 /* Frameworks */,
+				8AB79C80182978E700B94538 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8AB79C88182978E700B94538 /* PBXTargetDependency */,
+			);
+			name = ZMBCameraMadnessTests;
+			productName = ZMBCameraMadnessTests;
+			productReference = 8AB79C82182978E700B94538 /* ZMBCameraMadnessTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8AB79C59182978E700B94538 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ZMB;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Zuri Biringer";
+				TargetAttributes = {
+					8AB79C81182978E700B94538 = {
+						TestTargetID = 8AB79C60182978E700B94538;
+					};
+				};
+			};
+			buildConfigurationList = 8AB79C5C182978E700B94538 /* Build configuration list for PBXProject "ZMBCameraMadness" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8AB79C58182978E700B94538;
+			productRefGroup = 8AB79C62182978E700B94538 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8AB79C60182978E700B94538 /* ZMBCameraMadness */,
+				8AB79C81182978E700B94538 /* ZMBCameraMadnessTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8AB79C5F182978E700B94538 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AB79C7D182978E700B94538 /* Images.xcassets in Resources */,
+				8AB79C6F182978E700B94538 /* InfoPlist.strings in Resources */,
+				8AB79C78182978E700B94538 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AB79C80182978E700B94538 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AB79C8E182978E700B94538 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8AB79C5D182978E700B94538 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AB79C75182978E700B94538 /* ZMBAppDelegate.m in Sources */,
+				8AB79C71182978E700B94538 /* main.m in Sources */,
+				8AB79C7B182978E700B94538 /* ZMBViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AB79C7E182978E700B94538 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AB79C90182978E700B94538 /* ZMBCameraMadnessTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8AB79C88182978E700B94538 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AB79C60182978E700B94538 /* ZMBCameraMadness */;
+			targetProxy = 8AB79C87182978E700B94538 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8AB79C6D182978E700B94538 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AB79C6E182978E700B94538 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8AB79C76182978E700B94538 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AB79C77182978E700B94538 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8AB79C8C182978E700B94538 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AB79C8D182978E700B94538 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8AB79C91182978E700B94538 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8AB79C92182978E700B94538 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8AB79C94182978E700B94538 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZMBCameraMadness/ZMBCameraMadness-Prefix.pch";
+				INFOPLIST_FILE = "ZMBCameraMadness/ZMBCameraMadness-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8AB79C95182978E700B94538 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZMBCameraMadness/ZMBCameraMadness-Prefix.pch";
+				INFOPLIST_FILE = "ZMBCameraMadness/ZMBCameraMadness-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8AB79C97182978E700B94538 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZMBCameraMadness.app/ZMBCameraMadness";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZMBCameraMadness/ZMBCameraMadness-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ZMBCameraMadnessTests/ZMBCameraMadnessTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8AB79C98182978E700B94538 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZMBCameraMadness.app/ZMBCameraMadness";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZMBCameraMadness/ZMBCameraMadness-Prefix.pch";
+				INFOPLIST_FILE = "ZMBCameraMadnessTests/ZMBCameraMadnessTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8AB79C5C182978E700B94538 /* Build configuration list for PBXProject "ZMBCameraMadness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AB79C91182978E700B94538 /* Debug */,
+				8AB79C92182978E700B94538 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AB79C93182978E700B94538 /* Build configuration list for PBXNativeTarget "ZMBCameraMadness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AB79C94182978E700B94538 /* Debug */,
+				8AB79C95182978E700B94538 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8AB79C96182978E700B94538 /* Build configuration list for PBXNativeTarget "ZMBCameraMadnessTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AB79C97182978E700B94538 /* Debug */,
+				8AB79C98182978E700B94538 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8AB79C59182978E700B94538 /* Project object */;
+}
