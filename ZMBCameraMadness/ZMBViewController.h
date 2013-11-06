@@ -10,4 +10,6 @@
 
 @interface ZMBViewController : UIViewController
 
+@property (nonatomic) UIImagePickerController *picker;
+
 @end

@@ -8,7 +8,7 @@
 
 #import "ZMBViewController.h"
 
-@interface ZMBViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface ZMBViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate>
 
 @end
 
@@ -18,6 +18,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -30,19 +32,40 @@
 
 -(IBAction)choosePhoto:(id)sender
 {
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    [picker setDelegate:self];
+    _picker = [[UIImagePickerController alloc] init];
+    [_picker setDelegate:self];
     
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        [picker setSourceType:UIImagePickerControllerSourceTypeCamera];
+        [_picker setSourceType:UIImagePickerControllerSourceTypeCamera];
     } else {
-        [picker setSourceType:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
+        [_picker setSourceType:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
     }
-    
-    [picker setAllowsEditing:YES];
-    [self presentViewController:picker animated:YES completion:^{
+
+    [_picker setAllowsEditing:YES];
+    [self presentViewController:_picker animated:YES completion:^{
         NSLog(@"Showing Camera");
     }];
+    
+    UIActionSheet *myActionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Take Picture", @"Use Camera Roll", nil];
+    [myActionSheet showInView:self.view];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSLog(@"The %@ button was tapped.", [actionSheet buttonTitleAtIndex:buttonIndex]);
+    if (buttonIndex == 1)
+    {
+        [_picker setSourceType:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
+    }
+    if (buttonIndex == 2)
+    {
+        [_picker dismissViewControllerAnimated:YES completion:^{
+            NSLog(@"User cancelled action sheet");
+        }];
+    }
+
+    
+    
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
@@ -85,7 +108,9 @@
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-    NSLog(@"User cancelled image selection");
+    [self dismissViewControllerAnimated:YES completion:^{
+        NSLog(@"User cancelled image selection");
+    }];
 }
 
 - (void)image: (UIImage *)image didFinishSavingWithError: (NSError *) error
