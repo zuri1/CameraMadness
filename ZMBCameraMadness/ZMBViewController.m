@@ -7,6 +7,7 @@
 //
 
 #import "ZMBViewController.h"
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @interface ZMBViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate>
 
@@ -44,6 +45,18 @@
     [_picker setAllowsEditing:YES];
     [self presentViewController:_picker animated:YES completion:^{
         NSLog(@"Showing Camera");
+    }];
+    
+    ALAssetsLibrary *lib = [[ALAssetsLibrary alloc] init];
+    
+    [lib enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
+        NSLog(@"%i",[group numberOfAssets]);
+    } failureBlock:^(NSError *error) {
+        if (error.code == ALAssetsLibraryAccessUserDeniedError) {
+            NSLog(@"user denied access, code: %i",error.code);
+        }else{
+            NSLog(@"Other error code: %i",error.code);
+        }
     }];
     
     UIActionSheet *myActionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Take Picture", @"Use Camera Roll", nil];
