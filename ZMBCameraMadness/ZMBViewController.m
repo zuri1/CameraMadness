@@ -9,8 +9,9 @@
 #import "ZMBViewController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <Social/Social.h>
+#import <MessageUI/MessageUI.h>
 
-@interface ZMBViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate>
+@interface ZMBViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate>
 
 @end
 
@@ -156,6 +157,7 @@
         NSLog(@"Unable to save photo to camera roll");
     } else {
         NSLog(@"Saved image to camera roll");
+        NSLog(@"info: %@", contextInfo);
     }
 }
 
@@ -168,7 +170,86 @@
     [shareViewController addImage:_imageView.image];
     [shareViewController addURL:[NSURL URLWithString:@"http://facebook.com/zuri.biringer"]];
     [self presentViewController:shareViewController animated:YES completion:nil];
+}
+
+#pragma mark - MessageUI Kit
+
+- (IBAction)emailPhoto:(UIButton *)sender
+{
+    if ([MFMailComposeViewController canSendMail]){
+        MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
+        mailViewController.mailComposeDelegate = self;
+        [mailViewController setSubject:@"Hi from inside my app!"];
+        // Attach image somehow...
+        NSData *sendImage = UIImageJPEGRepresentation(_imageView.image, 0.0);
+        [mailViewController addAttachmentData:sendImage mimeType:@"image/jpeg" fileName:@"ZBImageAppImage.jpg"];
+        NSString *emailBody = @"This is my app saying hi!";
+        [mailViewController setMessageBody:emailBody isHTML:NO];
+        [self presentViewController:mailViewController animated:YES completion:nil];
+        
+    } else {
+        // Might want to make this an actionsheet or alert?
+        NSLog(@"Device not configured to send mail.");
+    }
+}
+
+- (IBAction)messagePhoto:(UIButton *)sender
+{
+    if ([MFMessageComposeViewController canSendText]) {
+        MFMessageComposeViewController *messageViewController = [[MFMessageComposeViewController alloc] init];
+        messageViewController.messageComposeDelegate = self;
+        NSData *sendImage = UIImageJPEGRepresentation(_imageView.image, 0.0);
+        [messageViewController addAttachmentData:sendImage typeIdentifier:@"public.jpeg" filename:@"ZBImageAppImage.jpg"];
+        [self presentViewController:messageViewController animated:YES completion:nil];
+    } else {
+        // Might want to make this an actionsheet or alert?
+        NSLog(@"Device not configured to send SMS.");
+    }
     
+}
+
+#pragma mark - Delegate methods
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Result: Mail sending canceled");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Result: Mail saved");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Result: Mail sent");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Result: Mail sending failed");
+            break;
+        default:
+            NSLog(@"Result: Mail not sent");
+            break;
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
+{
+    switch (result) {
+        case MessageComposeResultCancelled:
+            NSLog(@"Result: SMS sending canceled");
+            break;
+        case MessageComposeResultSent:
+            NSLog(@"Result: SMS sent");
+            break;
+        case MessageComposeResultFailed:
+            NSLog(@"Result: SMS sending failed");
+            break;
+        default:
+            NSLog(@"Result: SMS not sent");
+            break;
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

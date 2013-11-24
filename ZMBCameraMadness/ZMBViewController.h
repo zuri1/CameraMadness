@@ -12,5 +12,6 @@
 
 @property (nonatomic) UIImagePickerController *picker;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) NSURL *photoURL;
 
 @end
