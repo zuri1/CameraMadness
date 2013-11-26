@@ -183,10 +183,9 @@
         // Attach image somehow...
         NSData *sendImage = UIImageJPEGRepresentation(_imageView.image, 0.0);
         [mailViewController addAttachmentData:sendImage mimeType:@"image/jpeg" fileName:@"ZBImageAppImage.jpg"];
-        NSString *emailBody = @"This is my app saying hi!";
+        NSString *emailBody = @"http://hihihihihihihihihiiihihihihihihihhi.com/2010/11/tao-lins-drawing-style-re-2006-2010.html";
         [mailViewController setMessageBody:emailBody isHTML:NO];
         [self presentViewController:mailViewController animated:YES completion:nil];
-        
     } else {
         // Might want to make this an actionsheet or alert?
         NSLog(@"Device not configured to send mail.");
@@ -200,6 +199,7 @@
         messageViewController.messageComposeDelegate = self;
         NSData *sendImage = UIImageJPEGRepresentation(_imageView.image, 0.0);
         [messageViewController addAttachmentData:sendImage typeIdentifier:@"public.jpeg" filename:@"ZBImageAppImage.jpg"];
+        messageViewController.body = @"http://hihihihihihihihihiiihihihihihihihhi.com/2010/11/tao-lins-drawing-style-re-2006-2010.html";
         [self presentViewController:messageViewController animated:YES completion:nil];
     } else {
         // Might want to make this an actionsheet or alert?
